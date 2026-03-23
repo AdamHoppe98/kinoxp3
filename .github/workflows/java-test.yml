@@ -30,4 +30,5 @@ jobs:
           restore-keys: ${{ runner.os }}-maven-
 
       - name: Run tests
+        working-directory: ./backend
         run: mvn -B test
