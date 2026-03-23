@@ -1,4 +1,4 @@
-import { logout } from "../../api/admin.api.js";
+import { logout } from "../../kald/admin.api.js";
 
 export function createAdminMenu(app) {
     const div = document.createElement("div");

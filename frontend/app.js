@@ -4,7 +4,7 @@ import { createNotFound } from "./pages/notFound.js";
 import { createScreenings } from "./pages/screenings.js";
 import { createReservation } from "./pages/reservation.js";
 import { createAdminReservation } from "./pages/AdminPages/adminReservation.js";
-import { createAdminMenu } from "./pages/AdminPages/adminmenu.js";
+import { createAdminMenu } from "./pages/AdminPages/adminMenu.js";
 import { createAdminMovieList } from "./pages/AdminPages/adminMovieList.js";
 import { createConfirmation } from "./pages/confirmation.js";
 

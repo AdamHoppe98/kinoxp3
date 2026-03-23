@@ -1,5 +1,5 @@
-import { fetchScreenings } from "../api/screening.api.js";
-import { fetchMovie } from "../api/movie.api.js";
+import { fetchScreenings } from "../kald/screening.api.js";
+import { fetchMovie } from "../kald/movie.api.js";
 
 export async function createScreenings(app, movieId) {
   app.innerHTML = "";

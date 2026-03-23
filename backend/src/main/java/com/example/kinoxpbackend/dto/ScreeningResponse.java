@@ -10,6 +10,6 @@ public record ScreeningResponse(
         LocalDateTime startTime,
         double basePrice,
         boolean is3D,
-        List<SeatResponse> seatResponseList
+        List<SeatResponse> seats
 ) {
 }

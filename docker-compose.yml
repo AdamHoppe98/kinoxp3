@@ -3,10 +3,6 @@ networks:
     driver: bridge
 
 
-volumes:
-  db_data:
-
-
 services:
   db:
     image: mysql:8.0
@@ -17,8 +13,6 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
       - "127.0.0.1:3307:3306"
-    volumes:
-      - db_data:/var/lib/mysql
     healthcheck:
       test: [ "CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD --silent" ]
       interval: 10s
@@ -30,7 +24,7 @@ services:
 
   app:
     build:
-      context: .
+      context: ./backend
       dockerfile: Dockerfile
     env_file:
       - .env
@@ -47,3 +41,13 @@ services:
     restart: unless-stopped
     networks:
       - spring-mysql
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    networks:
+      - spring-mysql  # ← add this
+    depends_on:
+      - app
+    command: npx live-server --port=8080 --host=0.0.0.0

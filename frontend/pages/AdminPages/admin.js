@@ -1,4 +1,4 @@
-import { checkSession } from "../../api/admin.api.js";
+import { checkSession } from "../../kald/admin.api.js";
 import { createAdminLogin } from "./AdminLogin.js";
 let isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
 

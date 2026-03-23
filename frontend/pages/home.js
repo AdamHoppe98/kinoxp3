@@ -1,4 +1,4 @@
-import { fetchMovies } from "../api/movie.api.js";
+import { fetchMovies } from "../kald/movie.api.js";
 
 export async function createHome(app) {
   const movies = await fetchMovies();

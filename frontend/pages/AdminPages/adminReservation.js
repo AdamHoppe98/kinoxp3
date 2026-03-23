@@ -1,6 +1,6 @@
 // Importerer API-funktioner til at hente reservationer og screenings fra backend
-import { fetchScreening } from "../../api/screening.api.js";
-import { fetchReservations, deleteReservation } from "../../api/reservation.api.js";
+import { fetchScreening } from "../../kald/screening.api.js";
+import { fetchReservations, deleteReservation } from "../../kald/reservation.api.js";
 
 // Opretter et globalt table-element som genbruges ved hver opdatering
 const table = document.createElement("table", "text-center", "text-light");

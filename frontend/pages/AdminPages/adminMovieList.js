@@ -1,5 +1,5 @@
-import { fetchMovies, updateMovie, deleteMovie, createMovie } from "../../api/movie.api.js";
-import { createScreening } from "../../api/screening.api.js";
+import { fetchMovies, updateMovie, deleteMovie, createMovie } from "../../kald/movie.api.js";
+import { createScreening } from "../../kald/screening.api.js";
 
 export function createAdminMovieList(app) {
     render(app);

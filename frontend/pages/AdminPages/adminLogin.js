@@ -1,4 +1,4 @@
-import { login } from "../../api/admin.api.js";
+import { login } from "../../kald/admin.api.js";
 
 localStorage.setItem("isAuthenticated", "true");
 export function createAdminLogin(app) {

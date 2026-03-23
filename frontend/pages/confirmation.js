@@ -1,5 +1,5 @@
 //import { createConfirmation } from "/pages/confirmation.js";
-import { fetchReservation} from "../../api/reservation.api.js";
+import { fetchReservation} from "../kald/reservation.api.js";
 
 export async function createConfirmation(app, reservationId) {
     // Henter reservation data fra backend via id

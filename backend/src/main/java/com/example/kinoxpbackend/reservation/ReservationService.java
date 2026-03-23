@@ -63,7 +63,7 @@ public class ReservationService {
         return ReservationMapper.reservationToResponseMapper(reservationOptional.get());
     }
 
-    @Transactional(readOnly=true)
+    @Transactional()
     public ReservationResponse createReservation(ReservationRequest request) {
         Reservation reservation = ReservationMapper.requestToReservationMapper(request);
         Screening screening = screeningService.getScreeningById(request.screeningId());

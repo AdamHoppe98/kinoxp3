@@ -1,5 +1,5 @@
-import { fetchScreening } from "../api/screening.api.js";
-import { postReservation } from "../api/reservation.api.js";
+import { fetchScreening } from "../kald/screening.api.js";
+import { postReservation } from "../kald/reservation.api.js";
 
 let totalPrice = 0;
 
